@@ -79,7 +79,23 @@ npm start
   "mcpServers": {
     "lua-obfuscator": {
       "command": "node",
-      "args": ["C:/Users/SkieHackerYT/Desktop/ObfuscatorMCP/src/index.js"],
+      "args": ["/absolute/path/to/ObfuscatorsMCP/src/index.js"],
+      "env": {
+        "WYNFUSCATOR_API_KEY": "wynf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "LURAPH_API_KEY": "your-luraph-token"
+      }
+    }
+  }
+}
+```
+
+If you install this package globally, you can also use the CLI entrypoint directly:
+
+```json
+{
+  "mcpServers": {
+    "lua-obfuscator": {
+      "command": "lua-obfuscator-mcp",
       "env": {
         "WYNFUSCATOR_API_KEY": "wynf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
         "LURAPH_API_KEY": "your-luraph-token"
