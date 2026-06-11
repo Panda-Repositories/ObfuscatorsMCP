@@ -1,0 +1,42 @@
+{
+  "name": "lua-obfuscator-mcp",
+  "version": "1.0.0",
+  "description": "MCP server exposing the wYnFuscator and Luraph Lua obfuscation APIs as tools.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "lua-obfuscator-mcp": "src/index.js"
+  },
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "README.md",
+    ".env.example"
+  ],
+  "scripts": {
+    "start": "node src/index.js",
+    "start:http": "node src/index.js --http",
+    "dev": "node --watch src/index.js",
+    "test": "node test/smoke.mjs",
+    "inspect": "npx @modelcontextprotocol/inspector node src/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "lua",
+    "luau",
+    "obfuscation",
+    "wynfuscator",
+    "luraph",
+    "roblox"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^16.4.7",
+    "express": "^5.2.1",
+    "zod": "^3.25.1"
+  }
+}
